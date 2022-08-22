@@ -9,34 +9,43 @@ function getAllPlayer(event) {
 
 document.getElementById('btn-mashrafi').addEventListener('click', function () {
     getAllPlayer('mashrafi');
-
+    document.getElementById('btn-mashrafi').setAttribute("disabled", "");
 })
+
 document.getElementById('btn-sakib').addEventListener('click', function () {
     getAllPlayer('sakib');
-
+    document.getElementById('btn-sakib').setAttribute("disabled", "");
 })
+
 document.getElementById('btn-mahmudullah').addEventListener('click', function () {
     getAllPlayer('mahmudullah');
-
+    document.getElementById('btn-mahmudullah').setAttribute("disabled", "");
 })
+
 document.getElementById('btn-mushfiq').addEventListener('click', function () {
     getAllPlayer('mushfiq');
-
+    document.getElementById('btn-mushfiq').setAttribute("disabled", "");
 })
+
 document.getElementById('btn-sabbir').addEventListener('click', function () {
     getAllPlayer('sabbir');
-
+    document.getElementById('btn-sabbir').setAttribute("disabled", "");
 })
+
 document.getElementById('btn-bijoy').addEventListener('click', function () {
     getAllPlayer('bijoy');
-
+    document.getElementById('btn-bijoy').setAttribute("disabled", "");
 })
+
 document.getElementById('btn-anamul').addEventListener('click', function () {
     getAllPlayer('anamul');
-
+    document.getElementById('btn-anamul').setAttribute("disabled", "");
 })
 
-
+document.getElementById('btn-haque').addEventListener('click', function () {
+    getAllPlayer('haque');
+    document.getElementById('btn-haque').setAttribute("disabled", "");
+})
 
 
 
