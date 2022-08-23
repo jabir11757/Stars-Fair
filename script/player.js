@@ -1,10 +1,17 @@
-function getAllPlayer(event) {
-    const playerNameField = document.getElementById(event);
-    const playerName = playerNameField.innerText;
+function getAllPlayer(eventId) {
 
-    const playerListField = document.createElement('li');
-    playerListField.innerText = playerName;
-    document.getElementById('player-order-list').appendChild(playerListField);
+    const selectedPlayer = document.querySelectorAll('#player-order-list li');
+    if (selectedPlayer.length < 5) {
+        const playerNameField = document.getElementById(eventId);
+        const playerName = playerNameField.innerText;
+
+        const playerListField = document.createElement('li');
+        playerListField.innerText = playerName;
+        document.getElementById('player-order-list').appendChild(playerListField);
+    }
+    else {
+        alert("You don't have access to choose more")
+    }
 }
 
 document.getElementById('btn-mashrafi').addEventListener('click', function () {
@@ -37,15 +44,40 @@ document.getElementById('btn-bijoy').addEventListener('click', function () {
     document.getElementById('btn-bijoy').setAttribute("disabled", "");
 })
 
-document.getElementById('btn-anamul').addEventListener('click', function () {
-    getAllPlayer('anamul');
-    document.getElementById('btn-anamul').setAttribute("disabled", "");
+document.getElementById('btn-tamim').addEventListener('click', function () {
+    getAllPlayer('tamim');
+    document.getElementById('btn-tamim').setAttribute("disabled", "");
 })
 
-document.getElementById('btn-haque').addEventListener('click', function () {
-    getAllPlayer('haque');
-    document.getElementById('btn-haque').setAttribute("disabled", "");
+document.getElementById('btn-sohan').addEventListener('click', function () {
+    getAllPlayer('sohan');
+    document.getElementById('btn-sohan').setAttribute("disabled", "");
 })
 
 
 
+
+
+
+
+
+
+
+
+
+
+// function includeAllFunction(eventId, value) {
+//     document.getElementById(eventId).addEventListener('click', function () {
+//         getAllPlayer(value);
+//     }
+//     )
+// }
+
+// includeAllFunction('btn-mashrafi', 'mashrafi');
+// includeAllFunction('btn-sakib', 'sakib');
+// includeAllFunction('btn-mahmudullah', 'mahmudullah');
+// includeAllFunction('btn-mushfiq', 'mushfiq');
+// includeAllFunction('btn-sabbir', 'sabbir');
+// includeAllFunction('btn-bijoy', 'bijoy');
+// includeAllFunction('btn-anamul', 'anamul');
+// includeAllFunction('btn-haque', 'haque');
